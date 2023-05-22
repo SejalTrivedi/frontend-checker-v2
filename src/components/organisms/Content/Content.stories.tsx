@@ -34,9 +34,7 @@ const Template: Story<ContentProps> = (args) => <Content {...args} />;
 export const SampleContent = Template.bind({});
 SampleContent.args = {
   rightButtonList: (
-    <Stack direction={'row'} 
-    // paddingLeft={'1300px'} 
-    spacing={2}>
+    <Stack direction={'row'} spacing={2}>
       <Button
         children={'Export'}
         variant={'outlined'}
@@ -53,14 +51,9 @@ SampleContent.args = {
   contentBox: (
     <Card
       sx={{
-        boxShadow: '0px 4px 28px 0px #2D2D2F1A',
-        // position: 'absolute',
-        // width: '1056px',
-        // height: '646px',
-        // left: '0px',
-        // top: '0px',
+        // boxShadow: '0px 4px 28px 0px #2D2D2F1A',
         background: '#FFFFFF',
-        borderRadius: '6px'
+        borderRadius: '6px',
       }}
     >
       <Grid
@@ -68,10 +61,6 @@ SampleContent.args = {
         spacing={2}
         alignItems="center"
         sx={{
-          // height: '36px',
-          // width: '1056px',
-          // left: '16px',
-          // top: '12px',
           borderRadius: '0px',
           background: '#FFFFFF',
           justifyContent: 'space-between',
@@ -83,38 +72,35 @@ SampleContent.args = {
           </Typography>
         </Grid>
         <Grid item>
-          <Grid 
-          container
-          spacing={2}
-          alignItems="center">
-          <Grid item>
-            <OutlinedInput
-              id="outlined-adornment-weight"
-              startAdornment={
-                <InputAdornment position="start">
-                  <SearchOutlined></SearchOutlined>
-                </InputAdornment>
-              }
-              aria-describedby="outlined-weight-helper-text"
-              inputProps={{
-                'aria-label': 'weight',
-              }}
-            />
+          <Grid container spacing={2} alignItems="center">
+            <Grid item>
+              <OutlinedInput
+                id="outlined-adornment-weight"
+                startAdornment={
+                  <InputAdornment position="start">
+                    <SearchOutlined></SearchOutlined>
+                  </InputAdornment>
+                }
+                aria-describedby="outlined-weight-helper-text"
+                inputProps={{
+                  'aria-label': 'weight',
+                }}
+              />
+            </Grid>
+            <Grid item>
+              <Button
+                startIcon={<FilterListOutlined></FilterListOutlined>}
+                variant="outlined"
+                children="Filter"
+              ></Button>
+            </Grid>
+            <Grid item>
+              <Button
+                startIcon={<MoreVertOutlined></MoreVertOutlined>}
+                variant="outlined"
+              ></Button>
+            </Grid>
           </Grid>
-          <Grid item>
-            <Button
-              startIcon={<FilterListOutlined></FilterListOutlined>}
-              variant="outlined"
-              children="Filter"
-            ></Button>
-          </Grid>
-          <Grid item>
-            <Button
-              startIcon={<MoreVertOutlined></MoreVertOutlined>}
-              variant="outlined"
-            ></Button>
-          </Grid>
-        </Grid>
         </Grid>
       </Grid>
       <Divider></Divider>

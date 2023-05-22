@@ -36,12 +36,6 @@ SampleContentBody.args = {
     <Card
       sx={{
         boxShadow: '0px 4px 28px 0px #2D2D2F1A',
-        // position: 'absolute',
-        // width: '1056px',
-        // height: '646px',
-        // left: '0px',
-        // top: '0px',
-        // background: '#FFFFFF',
         borderRadius: '6px',
       }}
     >
@@ -50,10 +44,6 @@ SampleContentBody.args = {
         spacing={2}
         alignItems="center"
         sx={{
-          // height: '36px',
-          // width: '1056px',
-          // left: '16px',
-          // top: '12px',
           borderRadius: '0px',
           background: '#FFFFFF',
           justifyContent: 'space-between',
@@ -65,9 +55,7 @@ SampleContentBody.args = {
           </Typography>
         </Grid>
         <Grid item>
-          <Grid  container
-            spacing={2}
-            alignItems="center">
+          <Grid container spacing={2} alignItems="center">
             <Grid item>
               <OutlinedInput
                 id="outlined-adornment-weight"
