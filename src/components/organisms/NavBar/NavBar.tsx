@@ -11,19 +11,22 @@ export const LeftNavBar = ({ ...props }: LeftNavBarProps) => {
   return (
     <Box
       sx={{
-        width: '238px',
-        height: '900px',
+        width: '240px',
+        height: 'calc(100vh - 48px)',
         backgroundColor: '#FFFFFF',
-        top: '24px',
-        left: '30px',
+        // top: '24px',
+        // left: '30px',
         borderRadius: '8px',
         position: 'fixed',
+        boxShadow: '0px 4px 28px 0px #2D2D2F1A',
+        margin: '24px',
+        borderRight: 'none',
       }}
     >
-      <nav>
+      {/* <nav> */}
         <Box
           sx={{
-            height: '830px',
+            height: 'calc(100vh - 115px)',
           }}
         >
           <List>
@@ -37,7 +40,7 @@ export const LeftNavBar = ({ ...props }: LeftNavBarProps) => {
                 borderRadius="0px"
               />
             </ListItem>
-            <ListItem>
+            <ListItem sx={{textDecoration: 'none'}}>
               <MenuList></MenuList>
             </ListItem>
           </List>
@@ -48,7 +51,7 @@ export const LeftNavBar = ({ ...props }: LeftNavBarProps) => {
             <UserAvatarMolecule></UserAvatarMolecule>
           </List>
         </Box>
-      </nav>
+      {/* </nav> */}
     </Box>
   );
 };

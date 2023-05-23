@@ -8,7 +8,6 @@ const meta = {
 } satisfies Meta<typeof MenuList>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<MenuListProps> = (args) => (
   <MenuList {...args} />

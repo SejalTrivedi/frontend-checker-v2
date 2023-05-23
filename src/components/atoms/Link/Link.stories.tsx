@@ -8,7 +8,6 @@ const meta = {
 } satisfies Meta<typeof Link>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<LinkProps> = (args) => <Link {...args} />;
 

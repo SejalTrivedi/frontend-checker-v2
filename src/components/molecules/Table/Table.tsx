@@ -15,13 +15,8 @@ import { demoTableStoryRows } from '../../data/data';
 import { Button } from '../../atoms/Button/Button';
 
 export interface TableProps extends MuiTableProps {
-  dataRows: {
-    name: string;
-    adjudication: string;
-    status: string;
-    date: string;
-    location: string;
-  }[];
+  dataRows: any[];
+  sequenceColumn: string[];
 }
 
 export const Table: React.FC<TableProps> = ({
@@ -48,11 +43,9 @@ export const Table: React.FC<TableProps> = ({
         }}
       >
         <TableRow>
-          <TableCell>Name</TableCell>
-          <TableCell>Adjudication</TableCell>
-          <TableCell>Status</TableCell>
-          <TableCell>Date</TableCell>
-          <TableCell>Location</TableCell>
+          {props.sequenceColumn.map((cellTitle) => {
+            return <TableCell key={cellTitle}>{cellTitle}</TableCell>;
+          })}
         </TableRow>
       </TableHead>
       <TableBody>
@@ -61,11 +54,11 @@ export const Table: React.FC<TableProps> = ({
           .map((data) => {
             return (
               <TableRow>
-                <TableCell key={data.name}>
-                  <Button href="#text-buttons">{data.name}</Button>
+                <TableCell key={data['name']}>
+                  <Button href="#text-buttons">{data['name']}</Button>
                 </TableCell>
                 <TableCell key={data.adjudication}>
-                  {data.adjudication}
+                  {data.adjudication ? data.adjudication : '-'}
                 </TableCell>
                 <TableCell key={data.status}>
                   <Chip color="primary" label={data.status} />
@@ -82,7 +75,7 @@ export const Table: React.FC<TableProps> = ({
         <TableRow>
           <TableCell colSpan={5}>
             <TablePagination
-              rowsPerPageOptions={[10, 25, 100]}
+              rowsPerPageOptions={[5, 10, 25, 100]}
               component="div"
               count={dataRows.length}
               rowsPerPage={rowsPerPage}

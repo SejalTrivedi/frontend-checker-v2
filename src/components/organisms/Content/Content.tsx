@@ -17,12 +17,14 @@ export type ContentProps = {
 
 export const Content = ({ ...props }: ContentProps) => {
   return (
-    <Paper>
+    <>
       <ContentBodyTitle
         bodyTitle={props.bodyTitle}
         rightButtonList={props.rightButtonList}
-      ></ContentBodyTitle>
+        ></ContentBodyTitle>
+    <Paper>
       <ContentBody contentBox={props.contentBox}></ContentBody>
     </Paper>
+    </>
   );
 };

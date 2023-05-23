@@ -25,7 +25,6 @@ const meta = {
 } satisfies Meta<typeof ContentBody>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<ContentBodyProps> = (args) => (
   <ContentBody {...args} />
@@ -87,7 +86,16 @@ SampleContentBody.args = {
         </Grid>
       </Grid>
       <Divider></Divider>
-      <Table dataRows={demoTableStoryRows}></Table>
+      <Table
+        dataRows={demoTableStoryRows}
+        sequenceColumn={[
+          'name',
+          'adjudication',
+          'status',
+          'date',
+          'location',
+        ]}
+      ></Table>
     </Card>
   ),
 };

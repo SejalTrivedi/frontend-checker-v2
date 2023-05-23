@@ -8,7 +8,6 @@ const meta = {
 } satisfies Meta<typeof TextField>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<BaseTextFieldProps> = (args) => (
   <TextField {...args} />

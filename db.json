@@ -1,9 +1,353 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+	"candidate": [{
+			"id": 1,
+			"name": "John Smith",
+			"status": "Clear",
+			"adjudication": null,
+			"location": "Barrouallie",
+			"date": "2/22/2022",
+			"email": "John@gmail.com",
+			"dob": "2/22/2022"
+		},
+		{
+			"id": 2,
+			"name": "Serene",
+			"status": "Clear",
+			"adjudication": null,
+			"location": "Vänersborg",
+			"date": "3/31/2022",
+			"email": "Serene@gmail.com",
+			"dob": "3/31/2022"
+		},
+		{
+			"id": 3,
+			"name": "Walsh",
+			"status": "Consider",
+			"adjudication": null,
+			"location": "Sukamanah",
+			"date": "7/10/2022",
+			"email": "Walsh@gmail.com",
+			"dob": "7/10/2022"
+		},
+		{
+			"id": 4,
+			"name": "Maurizia",
+			"status": "Clear",
+			"adjudication": null,
+			"location": "Sukamanah",
+			"date": "10/3/2022",
+			"email": "Maurizia@gmail.com",
+			"dob": "10/3/2022"
+		},
+		{
+			"id": 5,
+			"name": "Kendre",
+			"status": "Clear",
+			"adjudication": null,
+			"location": "Beutong Ateuh",
+			"date": "9/18/2022",
+			"email": "Kendre@gmail.com",
+			"dob": "9/18/2022"
+		},
+		{
+			"id": 6,
+			"name": "Erastus",
+			"status": "Clear",
+			"adjudication": null,
+			"location": "Höviyn Am",
+			"date": "8/23/2022",
+			"email": "Erastus@gmail.com",
+			"dob": "8/23/2022"
+		},
+		{
+			"id": 7,
+			"name": "Jereme",
+			"status": "Consider",
+			"adjudication": null,
+			"location": "Sharïngol",
+			"date": "7/14/2022",
+			"email": "Jereme@gmail.com",
+			"dob": "7/14/2022"
+		},
+		{
+			"id": 8,
+			"name": "John Smith",
+			"status": "Consider",
+			"adjudication": null,
+			"location": "Lianyun",
+			"date": "6/13/2022",
+			"email": "John@gmail.com",
+			"dob": "6/13/2022"
+		},
+		{
+			"id": 9,
+			"name": "Kari",
+			"status": "Clear",
+			"adjudication": null,
+			"location": "Taboão da Serra",
+			"date": "5/23/2022",
+			"email": "Kari@gmail.com",
+			"dob": "5/23/2022"
+		},
+		{
+			"id": 10,
+			"name": "Kimble",
+			"status": "Consider",
+			"adjudication": null,
+			"location": "Veselí nad Moravou",
+			"date": "4/21/2022",
+			"email": "Kimble@gmail.com",
+			"dob": "4/21/2022"
+		},
+		{
+			"id": 11,
+			"name": "Ronak",
+			"status": "Clear",
+			"adjudication": null,
+			"location": "Rajkot",
+			"date": "11/20/2022",
+			"email": "Ronak@gmail.com",
+			"dob": "11/20/2022"
+		},
+		{
+			"id": 12,
+			"name": "Abhi",
+			"status": "Clear",
+			"adjudication": null,
+			"location": "Rajkot",
+			"date": "12/18/2022",
+			"email": "abhi@gmail.com",
+			"dob": "12/18/2022"
+		}
+	],
+	"report": [{
+			"id": 1,
+			"candidateId": 1,
+			"status": "Clear",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 2,
+			"candidateId": 2,
+			"status": "Clear",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 3,
+			"candidateId": 3,
+			"status": "Consider",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 4,
+			"candidateId": 4,
+			"status": "Clear",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 5,
+			"candidateId": 5,
+			"status": "Clear",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 6,
+			"candidateId": 6,
+			"status": "Clear",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 7,
+			"candidateId": 7,
+			"status": "Consider",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 8,
+			"candidateId": 8,
+			"status": "Consider",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 9,
+			"candidateId": 9,
+			"status": "Clear",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 10,
+			"candidateId": 10,
+			"status": "Consider",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 11,
+			"candidateId": 11,
+			"status": "Clear",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		},
+		{
+			"id": 12,
+			"candidateId": 12,
+			"status": "Clear",
+			"adjudication": null,
+			"package": "Employe Pro",
+			"created_at": "Dec 1, 2026 12:00:00 pm"
+		}
+	],
+
+	"candidate_court_searches": [{
+			"id": 1,
+			"candidateId": 1,
+			"court_searches": [{
+					"search_name": "SSN Verification",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "Sex Offender",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "Global Watchlist",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "Federal Criminal",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "County Criminal",
+					"status": "Clear",
+					"date": "2/22/2022"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"candidateId": 2,
+			"court_searches": [{
+					"search_name": "County Criminal",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "Sex Offender",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "Global Watchlist",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "Federal Criminal",
+					"status": "Clear",
+					"date": "2/22/2022"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"candidateId": 3,
+			"court_searches": [{
+					"search_name": "County Criminal",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "Sex Offender",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "Global Watchlist",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "SSN Verification",
+					"status": "Clear",
+					"date": "2/22/2022"
+				}
+			]
+		},
+		{
+			"id": 4,
+			"candidateId": 4,
+			"court_searches": [{
+					"search_name": "County Criminal",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "Sex Offender",
+					"status": "Clear",
+					"date": "2/22/2022"
+				},
+				{
+					"search_name": "Federal Criminal",
+					"status": "Clear",
+					"date": "2/22/2022"
+				}
+			]
+		}
+	],
+	"charges": [{
+			"id": 1,
+			"candidateId": 1,
+			"charges": ["Driving while license suspended", "Assault Domestic Violence", "Unable to verify employment history at Dunder Mifflin"]
+		},
+		{
+			"id": 2,
+			"candidateId": 2,
+			"charges": ["Driving while license suspended", "Assault Domestic Violence"]
+		},
+		{
+			"id": 3,
+			"candidateId": 3,
+			"charges": ["Driving while license suspended", "Unable to verify employment history at Dunder Mifflin"]
+		},
+		{
+			"id": 4,
+			"candidateId": 4,
+			"charges": ["Assault Domestic Violence", "Unable to verify employment history at Dunder Mifflin"]
+		},
+		{
+			"id": 5,
+			"candidateId": 5,
+			"charges": ["Unable to verify employment history at Dunder Mifflin"]
+		}
+	],
+	"pre_adverse_action": [{
+		"id": 1,
+		"candidateId": 1,
+		"action_email": ""
+	}]
+}

@@ -8,7 +8,6 @@ const meta = {
 } satisfies Meta<typeof HTMLPreview>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<HTMLPreviewProps> = (args) => (
   <HTMLPreview {...args} />

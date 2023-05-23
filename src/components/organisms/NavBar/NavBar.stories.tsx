@@ -8,7 +8,6 @@ const meta = {
 } satisfies Meta<typeof LeftNavBar>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<LeftNavBarProps> = (args) => (
   <LeftNavBar {...args} />

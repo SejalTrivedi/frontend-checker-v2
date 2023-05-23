@@ -13,7 +13,6 @@ const meta = {
 } satisfies Meta<typeof ContentBodyTitle>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<ContentBodyTitleProps> = (args) => (
   <ContentBodyTitle {...args} />
@@ -23,9 +22,7 @@ export const SampleContentBodyTitle = Template.bind({});
 SampleContentBodyTitle.args = {
   bodyTitle: 'Candidates',
   rightButtonList: (
-    <Stack direction={'row'} 
-    // paddingLeft={'1300px'} 
-    spacing={2}>
+    <Stack direction={'row'} spacing={2}>
       <Button
         children={'Export'}
         variant={'outlined'}

@@ -4,9 +4,7 @@ import { Avatar as UserAvatar } from '../../atoms/Avatar/Avatar';
 import { Button } from '../../atoms/Button/Button';
 import { LoginOutlined } from '@mui/icons-material';
 
-export type UserAvatarProps = {
-  // Define any props specific to your component
-};
+export type UserAvatarProps = {};
 
 export const UserAvatarMolecule: React.FC<UserAvatarProps> = ({
   ...props

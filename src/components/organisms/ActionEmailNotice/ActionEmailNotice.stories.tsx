@@ -12,7 +12,6 @@ const meta = {
 } satisfies Meta<typeof ActionEmailNotice>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<ActionEmailNoticeProps> = (args) => (
   <ActionEmailNotice {...args} />

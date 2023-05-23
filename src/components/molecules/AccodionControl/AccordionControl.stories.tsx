@@ -11,7 +11,6 @@ const meta = {
 } satisfies Meta<typeof AccordionControl>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<AccordionControlProps> = (args) => (
   <AccordionControl {...args} />

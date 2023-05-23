@@ -8,7 +8,6 @@ const meta = {
 } satisfies Meta<typeof UserAvatarMolecule>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<UserAvatarProps> = (args) => (
   <UserAvatarMolecule {...args} />

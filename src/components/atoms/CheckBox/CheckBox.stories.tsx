@@ -8,7 +8,6 @@ const meta = {
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<CheckboxProps> = (args) => (
   <Checkbox {...args} />

@@ -8,8 +8,8 @@ import {
 import { ExpandMore } from '@mui/icons-material';
 
 export interface AccordionProps {
-  title?: string;
-  accordionDetails?: React.ReactElement;
+  title: string;
+  accordionDetails: React.ReactElement;
   expanded?: boolean;
 }
 

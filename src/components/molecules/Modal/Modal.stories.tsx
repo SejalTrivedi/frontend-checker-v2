@@ -9,7 +9,6 @@ const meta = {
 } satisfies Meta<typeof Modal>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<ModalProps> = (args) => <Modal {...args} />;
 

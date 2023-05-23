@@ -27,7 +27,6 @@ const meta = {
 } satisfies Meta<typeof Content>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<ContentProps> = (args) => <Content {...args} />;
 
@@ -51,7 +50,6 @@ SampleContent.args = {
   contentBox: (
     <Card
       sx={{
-        // boxShadow: '0px 4px 28px 0px #2D2D2F1A',
         background: '#FFFFFF',
         borderRadius: '6px',
       }}
@@ -104,7 +102,16 @@ SampleContent.args = {
         </Grid>
       </Grid>
       <Divider></Divider>
-      <Table dataRows={demoTableStoryRows}></Table>
+      <Table
+        dataRows={demoTableStoryRows}
+        sequenceColumn={[
+          'name',
+          'adjudication',
+          'status',
+          'date',
+          'location',
+        ]}
+      ></Table>
     </Card>
   ),
 };

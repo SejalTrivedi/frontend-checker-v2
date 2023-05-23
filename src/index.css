@@ -12,3 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.text-decoration-none {
+  text-decoration: none;
+  color: #2C2C2E;
+}

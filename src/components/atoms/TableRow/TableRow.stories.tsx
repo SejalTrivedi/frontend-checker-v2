@@ -8,7 +8,6 @@ const meta = {
 } satisfies Meta<typeof TableRow>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<TableRowProps> = (args) => (
   <TableRow {...args} />

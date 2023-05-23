@@ -8,7 +8,6 @@ const meta = {
 } satisfies Meta<typeof Login>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<LoginProps> = (args) => <Login {...args} />;
 

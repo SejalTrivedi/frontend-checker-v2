@@ -9,7 +9,6 @@ const meta = {
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<AccordionProps> = (args) => (
   <Accordion {...args} />

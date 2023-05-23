@@ -13,35 +13,25 @@ export const ContentBodyTitle = ({
   return (
     <Box
       sx={{
-        // height: '700px',
-        // backgroundColor: '#CECECE',
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: '18px'
       }}
       {...props}
     >
-      {/* <Stack direction={'row'}> */}
-        {/* <Stack
-          height={'24px'}
-          width={'31px'}
-          left={'100px'}
-          top={'50px'}
-        > */}
-          <Typography
-            color={'#2C2C2E'}
-            font-family={'Inter'}
-            font-size={'20px'}
-            font-weight={'200px'}
-            line-height={'30px'}
-            letter-spacing={'0em'}
-            text-align={'left'}
-          >
-            {props.bodyTitle}
-          </Typography>
-        {/* </Stack> */}
-        {props.rightButtonList}
-      {/* </Stack> */}
+      <Typography
+        color={'#2C2C2E'}
+        fontFamily={'Inter'}
+        fontSize={'20px'}
+        fontWeight={'200px'}
+        lineHeight={'30px'}
+        letterSpacing={'0em'}
+        textAlign={'left'}
+      >
+        {props.bodyTitle}
+      </Typography>
+      {props.rightButtonList}
     </Box>
   );
 };

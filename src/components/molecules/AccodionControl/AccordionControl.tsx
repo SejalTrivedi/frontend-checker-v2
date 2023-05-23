@@ -19,7 +19,16 @@ export const AccordionControl: React.FC<AccordionControlProps> = ({
       <Accordion
         title="Title 1"
         accordionDetails={
-          <Table dataRows={demoTableStoryRows}></Table>
+          <Table
+            dataRows={demoTableStoryRows}
+            sequenceColumn={[
+              'name',
+              'adjudication',
+              'status',
+              'date',
+              'location',
+            ]}
+          ></Table>
         }
       ></Accordion>
       <Accordion

@@ -8,7 +8,6 @@ const meta = {
 } satisfies Meta<typeof Dialog>;
 
 export default meta;
-// type Story = StoryObj<typeof meta>;
 
 const Template: Story<DialogProps> = (args) => <Dialog {...args} />;
 

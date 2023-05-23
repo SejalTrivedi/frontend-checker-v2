@@ -12,28 +12,60 @@ import {
 } from '@mui/icons-material';
 
 import { Menu, MenuProps } from '../../atoms/Menu/Menu';
+import { Link } from 'react-router-dom';
 
 export type MenuListProps = {};
 
 export const MenuList: React.FC<MenuListProps> = ({ ...props }) => {
   const nav_bar_list_property = [
-    { menuName: 'Home', menuIcon: <HomeOutlined /> },
-    { menuName: 'Candidates', menuIcon: <PeopleAltOutlined /> },
-    { menuName: 'Adverse_Actions', menuIcon: <GavelOutlined /> },
-    { menuName: 'Logs', menuIcon: <ArticleOutlined /> },
-    { menuName: 'Analytics', menuIcon: <AnalyticsOutlined /> },
-    { menuName: 'Account', menuIcon: <AccountBoxOutlined /> },
-    { menuName: 'Screenings', menuIcon: <NoteAltOutlined /> },
+    {
+      redirectTo: '/',
+      menuName: 'Home',
+      menuIcon: <HomeOutlined />,
+    },
+    {
+      redirectTo: '/candidates',
+      menuName: 'Candidates',
+      menuIcon: <PeopleAltOutlined />,
+    },
+    {
+      redirectTo: '/',
+      menuName: 'Adverse_Actions',
+      menuIcon: <GavelOutlined />,
+    },
+    {
+      redirectTo: '/',
+      menuName: 'Logs',
+      menuIcon: <ArticleOutlined />,
+    },
+    {
+      redirectTo: '/',
+      menuName: 'Analytics',
+      menuIcon: <AnalyticsOutlined />,
+    },
+    {
+      redirectTo: '/',
+      menuName: 'Account',
+      menuIcon: <AccountBoxOutlined />,
+    },
+    {
+      redirectTo: '/',
+      menuName: 'Screenings',
+      menuIcon: <NoteAltOutlined />,
+    },
   ];
 
   return (
     <Stack>
       {nav_bar_list_property.map((menu) => {
         return (
-          <Menu
-            menuIcon={menu.menuIcon}
-            menuName={menu.menuName}
-          ></Menu>
+          <Link to={menu.redirectTo} className='text-decoration-none'>
+            <Menu
+              key={menu.menuName}
+              menuIcon={menu.menuIcon}
+              menuName={menu.menuName}
+            ></Menu>
+          </Link>
         );
       })}
     </Stack>
