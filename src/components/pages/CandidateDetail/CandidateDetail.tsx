@@ -52,10 +52,12 @@ export const CandidateDetail
       <ContentBodyTitle
         rightButtonList={
           <Stack direction={'row'} spacing={2}>
-            <Button
-              children={'Pre-Adverse Action'}
-              variant={'outlined'}
-            />
+            <Link to={`/pre-adverse-action/${candidate.id}`}>
+                <Button
+                children={'Pre-Adverse Action'}
+                variant={'outlined'}
+                />
+            </Link>
             <Button children={'Engage'} variant={'contained'} />
           </Stack>
         }

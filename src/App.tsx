@@ -7,6 +7,7 @@ import {
 import { RootLayout } from './components/pages/Root';
 import { CandidatePage } from './components/pages/Candidate';
 import { CandidateDetail } from './components/pages/CandidateDetail/CandidateDetail';
+import { PreAdverseAction } from './components/pages/PreAdverseAction/PreAdverseAction';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
           />
         ),
       },
+      { path: '/pre-adverse-action/:id', element: <PreAdverseAction />}
     ],
   },
 ]);
