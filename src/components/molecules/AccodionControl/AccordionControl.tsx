@@ -1,9 +1,5 @@
 import * as React from 'react';
-import { ExpandMoreOutlined } from '@mui/icons-material';
-import {
-  Accordion,
-  AccordionProps,
-} from '../../atoms/Accordion/Accordion';
+import { Accordion } from '../../atoms/Accordion/Accordion';
 import { demoTableStoryRows } from '../../data/data';
 
 import { Table } from '../Table/Table';

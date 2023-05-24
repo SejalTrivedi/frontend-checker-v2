@@ -1,42 +1,45 @@
-import React from 'react';
+import { Typography } from '@mui/material';
+
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { number } from 'prop-types';
-import { Grid, Typography } from '@mui/material';
+import { Stack } from '@mui/system';
 import { Checkbox } from '../../atoms/CheckBox/CheckBox';
+type Data = {
+  id: number;
+  candidateId: number;
+  charges: string[];
+};
 
-export class ChargeList extends React.Component {
-  state = {
-    chargeList: [],
-    candidateId: number,
-  };
+type CandidateChargeListProps = {
+  candidateId: number | undefined;
+};
 
-  componentDidMount() {
-    axios
-      .get(
-        `http://localhost:3000/charges?candidateId=${this.state.candidateId}`
-      )
-      .then((res) => {
-        const chargeList = res.data;
-        this.setState({ chargeList });
-      });
-  }
+export const CandidateChargeList: React.FC<
+  CandidateChargeListProps
+> = ({ ...props }) => {
+  const [data, setData] = useState<Data | null>(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(
+        `http://localhost:3000/charges?candidateId=${props.candidateId}`
+      );
+      setData(response.data[0]);
+    };
 
-  render() {
-    return (
-      <Grid>
-        {this.state.chargeList.map((chargeName) => {
-          return (
-            <Grid item>
-              <div>
-                <Checkbox></Checkbox>
-              </div>
-              <div>
-                <Typography>{chargeName}</Typography>
-              </div>
-            </Grid>
-          );
-        })}
-      </Grid>
-    );
-  }
-}
+    fetchData();
+  }, [props.candidateId]);
+  return (
+    <Stack>
+      {data?.charges.map((chargeName) => {
+        return (
+          <>
+            <Stack direction={'row'}>
+              <Checkbox></Checkbox>
+              <Typography>{chargeName}</Typography>
+            </Stack>
+          </>
+        );
+      })}
+    </Stack>
+  );
+};

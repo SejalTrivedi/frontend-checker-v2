@@ -1,5 +1,4 @@
 import './App.css';
-import { Card } from '@mui/material';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -7,32 +6,31 @@ import {
 
 import { RootLayout } from './components/pages/Root';
 import { CandidatePage } from './components/pages/Candidate';
+import { CandidateDetail } from './components/pages/CandidateDetail/CandidateDetail';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
-    children: [{ path: '/candidates', element: <CandidatePage /> }],
+    children: [
+      { path: '/candidates', element: <CandidatePage /> },
+      {
+        path: '/candidate-detail/:id',
+        element: (
+          <CandidateDetail
+            // candidateId={1}
+            // candidateName="Jhon Smith"
+          />
+        ),
+      },
+    ],
   },
 ]);
 
 function App() {
   return (
     <div className="App-header">
-      {/* <Card
-        // variant="outlined"
-        color="blue"
-        sx={{
-          // width: 320,
-          gap: 2,
-          '&:hover': {
-            boxShadow: 'md',
-            borderColor: 'neutral.outlinedHoverBorder',
-          },
-        }}
-      > */}
-        <RouterProvider router={router} />{' '}
-      {/* </Card> */}
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 import { ContentBody, ContentBodyProps } from './ContentBody';
-import { Table, TableProps } from '../Table/Table';
+import { Table } from '../Table/Table';
 import { demoTableStoryRows } from '../../data/data';
 import {
   Button,
@@ -12,7 +12,6 @@ import {
   InputAdornment,
   OutlinedInput,
 } from '@mui/material';
-import { TextField } from '../../atoms/TextField/TextField';
 import {
   FilterListOutlined,
   MoreVertOutlined,

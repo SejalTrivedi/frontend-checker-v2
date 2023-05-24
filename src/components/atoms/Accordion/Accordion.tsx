@@ -4,6 +4,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   Typography,
+  Divider,
 } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
 
@@ -28,6 +29,7 @@ export const Accordion: React.FC<AccordionProps> = ({
       >
         <Typography>{title}</Typography>
       </AccordionSummary>
+      <Divider></Divider>
       <AccordionDetails>{accordionDetails}</AccordionDetails>
     </MUIAccordion>
   );

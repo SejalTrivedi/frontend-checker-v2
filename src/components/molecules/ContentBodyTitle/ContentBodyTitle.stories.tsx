@@ -7,6 +7,7 @@ import {
 import { Stack, color } from '@mui/system';
 import { Button } from '../../atoms/Button/Button';
 import { Download, PlusOne } from '@mui/icons-material';
+import { Typography } from '@mui/material';
 const meta = {
   title: 'Components/Molecules/ContentBodyTitle',
   component: ContentBodyTitle,
@@ -20,7 +21,7 @@ const Template: Story<ContentBodyTitleProps> = (args) => (
 
 export const SampleContentBodyTitle = Template.bind({});
 SampleContentBodyTitle.args = {
-  bodyTitle: 'Candidates',
+  bodyTitle: <Typography>Candidates</Typography>,
   rightButtonList: (
     <Stack direction={'row'} spacing={2}>
       <Button

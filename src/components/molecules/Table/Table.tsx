@@ -13,6 +13,7 @@ import {
 
 import { demoTableStoryRows } from '../../data/data';
 import { Button } from '../../atoms/Button/Button';
+import { Link } from 'react-router-dom';
 
 export interface TableProps extends MuiTableProps {
   dataRows: any[];
@@ -55,7 +56,7 @@ export const Table: React.FC<TableProps> = ({
             return (
               <TableRow>
                 <TableCell key={data['name']}>
-                  <Button href="#text-buttons">{data['name']}</Button>
+                  <Link to={`/candidate-detail/${data.id}`}>{data['name']}</Link>
                 </TableCell>
                 <TableCell key={data.adjudication}>
                   {data.adjudication ? data.adjudication : '-'}

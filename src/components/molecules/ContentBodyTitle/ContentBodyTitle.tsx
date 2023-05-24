@@ -4,7 +4,7 @@ import { Stack } from '@mui/system';
 
 export type ContentBodyTitleProps = {
   rightButtonList: React.ReactElement | null;
-  bodyTitle: string;
+  bodyTitle: React.ReactElement;
 };
 
 export const ContentBodyTitle = ({
@@ -16,7 +16,7 @@ export const ContentBodyTitle = ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: '18px'
+        marginBottom: '18px',
       }}
       {...props}
     >
@@ -28,6 +28,7 @@ export const ContentBodyTitle = ({
         lineHeight={'30px'}
         letterSpacing={'0em'}
         textAlign={'left'}
+        marginLeft={'10px'}
       >
         {props.bodyTitle}
       </Typography>

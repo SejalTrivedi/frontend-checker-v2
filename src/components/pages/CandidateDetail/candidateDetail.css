@@ -1,0 +1,21 @@
+.candidate-Box {
+    box-sizing: border-box;
+    width: 44px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #E5E7ED;
+    border-radius: 12px;
+    margin-top: 11px;
+    margin-left: 10px;
+  }
+  
+.candidate-Paper{
+    height: 68px;
+    width: 330px;
+    background-color: #F7F8FA;
+}
+
+.unset-Icon-Style {
+    height: unset !important;
+    width: unset !important;
+}

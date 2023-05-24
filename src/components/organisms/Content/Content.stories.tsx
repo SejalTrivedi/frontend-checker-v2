@@ -1,5 +1,4 @@
-import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, Story } from '@storybook/react';
 import { Content, ContentProps } from './Content';
 import { Stack } from '@mui/system';
 import { Button } from '../../atoms/Button/Button';
@@ -46,7 +45,7 @@ SampleContent.args = {
       />
     </Stack>
   ),
-  bodyTitle: 'Candidate',
+  bodyTitle: <Typography>Candidate</Typography>,
   contentBox: (
     <Card
       sx={{

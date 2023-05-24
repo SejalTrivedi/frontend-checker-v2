@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Box } from '@mui/material';
+import { Stack } from '@mui/material';
 
 import {
   HomeOutlined,
@@ -11,7 +11,7 @@ import {
   NoteAltOutlined,
 } from '@mui/icons-material';
 
-import { Menu, MenuProps } from '../../atoms/Menu/Menu';
+import { Menu } from '../../atoms/Menu/Menu';
 import { Link } from 'react-router-dom';
 
 export type MenuListProps = {};
@@ -30,7 +30,7 @@ export const MenuList: React.FC<MenuListProps> = ({ ...props }) => {
     },
     {
       redirectTo: '/',
-      menuName: 'Adverse_Actions',
+      menuName: 'Adverse Actions',
       menuIcon: <GavelOutlined />,
     },
     {
@@ -59,7 +59,7 @@ export const MenuList: React.FC<MenuListProps> = ({ ...props }) => {
     <Stack>
       {nav_bar_list_property.map((menu) => {
         return (
-          <Link to={menu.redirectTo} className='text-decoration-none'>
+          <Link to={menu.redirectTo} className="text-decoration-none">
             <Menu
               key={menu.menuName}
               menuIcon={menu.menuIcon}

@@ -6,5 +6,9 @@ export type ContentBodyProps = {
   contentBox: React.ReactElement | null;
 };
 export const ContentBody = ({ ...props }: ContentBodyProps) => {
-  return <Paper {...props}>{props.contentBox}</Paper>;
+  return (
+    <Paper elevation={0} {...props}>
+      {props.contentBox}
+    </Paper>
+  );
 };
