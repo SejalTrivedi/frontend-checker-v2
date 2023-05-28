@@ -13,7 +13,6 @@ export const LeftNavBar = ({ ...props }: LeftNavBarProps) => {
         width: '240px',
         height: 'calc(100vh - 48px)',
         backgroundColor: '#FFFFFF',
-
         borderRadius: '8px',
         position: 'fixed',
         boxShadow: '0px 4px 28px 0px #2D2D2F1A',

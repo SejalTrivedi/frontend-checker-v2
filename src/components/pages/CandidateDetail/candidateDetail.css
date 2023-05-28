@@ -7,15 +7,34 @@
     border-radius: 12px;
     margin-top: 11px;
     margin-left: 10px;
+    color: #95AAFF;
+    padding: 10px;
   }
   
 .candidate-Paper{
     height: 68px;
     width: 330px;
-    background-color: #F7F8FA;
+    background-color: #E5E7ED;
+    background: #FAFAFC;    
+    border: 1px solid #E5E7ED;
+    border-radius: 12px;
 }
+
 
 .unset-Icon-Style {
     height: unset !important;
     width: unset !important;
+}
+
+.candidate-info {
+    -webkit-justify-content: unset !important;
+    justify-content: unset !important;
+    padding: 16px !important;
+}
+.candidate-text {
+    margin-top: 8px;
+}
+.candidate-link {
+    text-decoration: none;
+    color: #2C2C2E;
 }

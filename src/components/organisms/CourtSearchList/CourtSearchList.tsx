@@ -5,6 +5,7 @@ import {
   TableRow,
   TableHead,
   Typography,
+  Chip,
 } from '@mui/material';
 
 import React, { useEffect, useState } from 'react';
@@ -40,6 +41,10 @@ export const CourtSearchList: React.FC<CourtSearchProps> = ({
 
     fetchData();
   }, [props.candidateId]);
+  
+  const getStatusValueColor = (value: string) => {
+    return value == 'Clear' ? 'status-clear' : 'status-consider';
+  };
   return (
     <Table>
       <TableHead
@@ -63,7 +68,14 @@ export const CourtSearchList: React.FC<CourtSearchProps> = ({
                 </Typography>
               </TableCell>
               <TableCell>
-                <Typography>{searchData.status}</Typography>
+                  {searchData.status ? (
+                    <Chip
+                      className={getStatusValueColor(searchData.status)}
+                      label={searchData.status}
+                    />
+                  ) : (
+                    '-'
+                  )}
               </TableCell>
               <TableCell>
                 <Typography>{searchData.date}</Typography>

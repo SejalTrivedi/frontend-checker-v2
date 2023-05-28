@@ -1,16 +1,21 @@
 import React from 'react';
 import { Meta, StoryObj, Story } from '@storybook/react';
-import { Modal, ModalProps } from './Modal';
+import {
+  EmailPreviewNoticeModal,
+  EmailPreviewNoticeModalProps,
+} from './EmailPreviewNoticeModal';
 import { Box, Typography } from '@mui/material';
 
 const meta = {
-  title: 'Components/Molecules/Modal',
-  component: Modal,
-} satisfies Meta<typeof Modal>;
+  title: 'Components/Molecules/EmailPreviewNoticeModal',
+  component: EmailPreviewNoticeModal,
+} satisfies Meta<typeof EmailPreviewNoticeModal>;
 
 export default meta;
 
-const Template: Story<ModalProps> = (args) => <Modal {...args} />;
+const Template: Story<EmailPreviewNoticeModalProps> = (args) => (
+  <EmailPreviewNoticeModal {...args} />
+);
 
 export const SampleModal = Template.bind({});
 SampleModal.args = {

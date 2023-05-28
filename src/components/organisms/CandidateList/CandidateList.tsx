@@ -20,8 +20,8 @@ export class CandidateList extends React.Component {
         dataRows={this.state.persons}
         sequenceColumn={[
           'Name',
-          'Status',
           'Adjudication',
+          'Status',
           'Location',
           'Date',
         ]}

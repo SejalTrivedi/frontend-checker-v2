@@ -74,6 +74,7 @@ export function CandidatePage() {
                     inputProps={{
                       'aria-label': 'weight',
                     }}
+                    placeholder='Search any candidate'
                   />
                 </Grid>
                 <Grid item>

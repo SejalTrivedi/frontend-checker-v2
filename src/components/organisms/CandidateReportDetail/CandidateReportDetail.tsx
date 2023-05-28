@@ -42,14 +42,14 @@ export const CandidateReportDetail: React.FC<
     <>
       <Grid sx={{ flexGrow: 1 }} container spacing={2}>
         <Grid item xs={12}>
-          <Grid container justifyContent="center" spacing={2}>
+          <Grid container justifyContent="center" spacing={2} className='candidate-info'>
             <Grid item>
               <Paper className="candidate-Paper">
                 <Stack direction="row" spacing={1}>
                   <Box className="candidate-Box">
                     <QueryBuilderOutlined className="unset-Icon-Style" />
                   </Box>
-                  <Stack>
+                  <Stack className='candidate-text'>
                     <Stack>
                       <Typography>Status</Typography>
                     </Stack>
@@ -66,7 +66,7 @@ export const CandidateReportDetail: React.FC<
                   <Box className="candidate-Box">
                     <GavelOutlined className="unset-Icon-Style" />
                   </Box>
-                  <Stack>
+                  <Stack className='candidate-text'>
                     <Stack>
                       <Typography>Adjudication</Typography>
                     </Stack>
@@ -83,7 +83,7 @@ export const CandidateReportDetail: React.FC<
                   <Box className="candidate-Box">
                     <Inventory2Outlined className="unset-Icon-Style" />
                   </Box>
-                  <Stack>
+                  <Stack className='candidate-text'>
                     <Stack>
                       <Typography>Package</Typography>
                     </Stack>
@@ -94,15 +94,13 @@ export const CandidateReportDetail: React.FC<
                 </Stack>
               </Paper>
             </Grid>
-          </Grid>
-          <Grid container justifyContent="center" spacing={2}>
             <Grid item>
               <Paper className="candidate-Paper">
                 <Stack direction="row" spacing={1}>
                   <Box className="candidate-Box">
                     <DateRangeOutlined className="unset-Icon-Style" />
                   </Box>
-                  <Stack>
+                  <Stack className='candidate-text'>
                     <Stack>
                       <Typography>Created At</Typography>
                     </Stack>

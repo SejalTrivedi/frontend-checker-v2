@@ -39,3 +39,28 @@
 body {
   background: #F7F8FA !important;
 }
+
+.status-clear {
+  background: #F2FCFB !important;
+  border: 1px solid #F2FCFB !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  padding: 4px 12px !important;
+  gap: 10px !important;
+  color: #17A076 !important;
+  text-transform: uppercase !important;
+}
+.status-consider {
+  background: #FAF8EB !important;
+  border: 1px solid #FAF8EB !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  padding: 4px 12px !important;
+  gap: 10px !important;
+  color: #A08817 !important;
+  text-transform: uppercase !important;
+}

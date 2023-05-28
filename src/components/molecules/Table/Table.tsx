@@ -12,7 +12,6 @@ import {
 } from '@mui/material';
 
 import { demoTableStoryRows } from '../../data/data';
-import { Button } from '../../atoms/Button/Button';
 import { Link } from 'react-router-dom';
 
 export interface TableProps extends MuiTableProps {
@@ -36,6 +35,12 @@ export const Table: React.FC<TableProps> = ({
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+  const getStatusValueColor = (value: string) => {
+    return value == 'Clear' ? 'status-clear' : 'status-consider';
+  };
+  const getAdjudicationValueColor = (value: string) => {
+    return value == 'Adverse Action' ? 'status-consider' : 'status-clear';
+  };
   return (
     <MuiTable {...props}>
       <TableHead
@@ -56,13 +61,33 @@ export const Table: React.FC<TableProps> = ({
             return (
               <TableRow>
                 <TableCell key={data['name']}>
-                  <Link to={`/candidate-detail/${data.id}`}>{data['name']}</Link>
+                  <Link to={`/candidate-detail/${data.id}`}>
+                    {data['name']}
+                  </Link>
                 </TableCell>
                 <TableCell key={data.adjudication}>
-                  {data.adjudication ? data.adjudication : '-'}
+                  {data.adjudication ? (
+                    <Chip
+                      // color={getAdjudicationValueColor(
+                      //   data.adjudication
+                      // )}
+                      className={getAdjudicationValueColor(data.adjudication)}
+                      label={data.adjudication}
+                    />
+                  ) : (
+                    '-'
+                  )}
                 </TableCell>
                 <TableCell key={data.status}>
-                  <Chip color="primary" label={data.status} />
+                  {data.status ? (
+                    <Chip
+                      // color={getStatusValueColor(data.status)}
+                      className={getStatusValueColor(data.status)}
+                      label={data.status}
+                    />
+                  ) : (
+                    '-'
+                  )}
                 </TableCell>
                 <TableCell key={data.date}>{data.date}</TableCell>
                 <TableCell key={data.location}>

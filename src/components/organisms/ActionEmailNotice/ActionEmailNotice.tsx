@@ -7,7 +7,7 @@ import {
   HTMLPreview,
   HTMLPreviewProps,
 } from '../../molecules/HtmlPreview/HtmlPreview';
-import { Modal } from '../../molecules/Modal/Modal';
+import { EmailPreviewNoticeModal } from '../EmailPreviewNoticeModal/EmailPreviewNoticeModal';
 
 export type ActionEmailNoticeProps = {
   from: string;
@@ -72,14 +72,14 @@ export const ActionEmailNotice = ({
             }}
           >
             <Grid container>
-              <Grid lg={6}>
+              <Grid lg={6} className="mail-footer">
                 <Grid item>
                   <Typography className="text-end">
                     Auto send Post Adverse action
                   </Typography>
                 </Grid>
                 <Grid item>
-                  <TextField
+                  <TextField className='mail-input'
                     value={props.autoSendEmailAfterDays}
                   ></TextField>
                 </Grid>
@@ -88,8 +88,8 @@ export const ActionEmailNotice = ({
                 </Grid>
               </Grid>
               <Grid lg={6} item alignContent="right">
-                <Modal
-                  modalButtonName="Save me"
+                <EmailPreviewNoticeModal
+                  modalSubmitButtonName="Save me"
                   modalTitle="Sample Modal"
                   openButtonName="Open Modal"
                   modalContent={
@@ -97,7 +97,7 @@ export const ActionEmailNotice = ({
                       htmlContent={props.emailContent}
                     ></HTMLPreview>
                   }
-                ></Modal>
+                ></EmailPreviewNoticeModal>
               </Grid>
             </Grid>
           </Grid>

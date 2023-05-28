@@ -55,7 +55,7 @@ export interface ModalProps {
   openButtonName: string;
   modalTitle: string;
   modalContent: React.ReactElement;
-  modalButtonName: string;
+  modalSubmitButtonName: string;
 }
 
 export const Modal = ({ ...props }: ModalProps) => {
@@ -87,7 +87,7 @@ export const Modal = ({ ...props }: ModalProps) => {
         <DialogContent dividers>{props.modalContent}</DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleClose}>
-            {props.modalButtonName}
+            {props.modalSubmitButtonName}
           </Button>
         </DialogActions>
       </BootstrapDialog>
