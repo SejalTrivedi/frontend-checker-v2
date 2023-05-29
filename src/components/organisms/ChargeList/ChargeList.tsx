@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Stack } from '@mui/system';
 import { Checkbox } from '../../atoms/CheckBox/CheckBox';
+import '../../pages/PreAdverseAction/preAdverse.css';
+
 type Data = {
   id: number;
   candidateId: number;
@@ -50,7 +52,12 @@ export const CandidateChargeList: React.FC<
                 checked={checkedItems.includes(chargeName)}
                 onChange={() => handleCheckboxChange(chargeName)}
               ></Checkbox>
-              <Typography sx={{paddingTop: '8px'}}>{chargeName}</Typography>
+              <Typography
+                sx={{ paddingTop: '8px' }}
+                className="mail-body-1"
+              >
+                {chargeName}
+              </Typography>
             </Stack>
           </>
         );

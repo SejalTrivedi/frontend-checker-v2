@@ -8,8 +8,6 @@ import {
   DialogContent,
   DialogActions,
   IconButton,
-  Typography,
-  Box,
 } from '@mui/material';
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -65,8 +63,6 @@ export const EmailPreviewNoticeModal = ({
   ...props
 }: EmailPreviewNoticeModalProps) => {
   const [mainModalOpen, setMainModalOpen] = React.useState(false);
-  const [responseModalOpen, setResponseModalOpen] =
-    React.useState(false);
 
   const mainModalHandleClickOpen = () => {
     setMainModalOpen(true);
@@ -75,27 +71,16 @@ export const EmailPreviewNoticeModal = ({
     setMainModalOpen(false);
   };
 
-  const responseModalHandleClickOpen = () => {
-    mainModalHandleClose();
-    setResponseModalOpen(true);
-  };
-  const responseModalHandleClose = () => {
-    setResponseModalOpen(false);
-  };
-
   const mainModalHandleSubmit = async () => {
     try {
-      // Make PUT API request
-
       props.candidateData['adjudication'] = 'Adverse Action';
       await axios.put(
         `http://localhost:3000/candidate/${props.candidateData['id']}`,
         props.candidateData
       );
-      responseModalHandleClickOpen();
+      window.location.href = '/candidates';
     } catch (error) {
       console.error('Error:', error);
-      // Handle error here
     }
   };
 
@@ -110,35 +95,24 @@ export const EmailPreviewNoticeModal = ({
         aria-labelledby="customized-dialog-title"
         open={mainModalOpen}
       >
-        <BootstrapDialogTitle
-          id="customized-dialog-title"
-          onClose={mainModalHandleClose}
-        >
-          {props.modalTitle}
-        </BootstrapDialogTitle>
-        <DialogContent dividers>{props.modalContent}</DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={mainModalHandleSubmit}>
-            {props.modalSubmitButtonName}
-          </Button>
-        </DialogActions>
-      </BootstrapDialog>
-
-      <BootstrapDialog
-        onClose={responseModalHandleClose}
-        aria-labelledby="customized-dialog-title"
-        open={responseModalOpen}
-        sx={{
-          borderRadius: '6px',
-        }}
-      >
-        <DialogContent>
-          <Box alignContent={'center'}>
-            <Typography>
-              Pre-Advance Action notice successfully sent
-            </Typography>
-          </Box>
-        </DialogContent>
+        <div>
+          <BootstrapDialogTitle
+            id="customized-dialog-title"
+            onClose={mainModalHandleClose}
+          >
+            {props.modalTitle}
+          </BootstrapDialogTitle>
+          <DialogContent dividers>{props.modalContent}</DialogContent>
+          <DialogActions>
+            <Button
+              variant="contained"
+              autoFocus
+              onClick={mainModalHandleSubmit}
+            >
+              {props.modalSubmitButtonName}
+            </Button>
+          </DialogActions>
+        </div>
       </BootstrapDialog>
     </div>
   );

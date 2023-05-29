@@ -29,6 +29,7 @@ type Data = {
 export const PreAdverseAction = ({ ...props }) => {
   const candidate = useParams();
   const [data, setData] = useState<Data | null>(null);
+  const attachments = ['Summary of right under the FCRA', 'Copy of background report'];
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
@@ -51,7 +52,10 @@ export const PreAdverseAction = ({ ...props }) => {
       <ContentBodyTitle
         rightButtonList={<></>}
         bodyTitle={
-          <Link to={`/candidate-detail/${candidate.id}`} className='candidate-link'>
+          <Link
+            to={`/candidate-detail/${candidate.id}`}
+            className="candidate-link"
+          >
             <Stack direction="row" spacing={2}>
               <WestOutlined></WestOutlined>
               <Typography>Pre-Adverse Action Notice</Typography>
@@ -78,6 +82,7 @@ export const PreAdverseAction = ({ ...props }) => {
               <EmailNoticeTemplate
                 candidateName={data?.name}
                 candidateEmail={data?.email}
+                regularPreviewFlag={true}
                 candidateCharges={
                   <CandidateChargeList
                     checkedItems={checkedItems}
@@ -98,12 +103,23 @@ export const PreAdverseAction = ({ ...props }) => {
                 alignItems="center"
               >
                 <Grid item>
-                  <Typography className="text-end">
-                    Auto send Post Adverse action {' '}
+                  <Typography
+                    className="text-end"
+                    sx={{
+                      marginTop: '25px',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    Auto send Post Adverse action{' '}
                     <TextField
                       type="number"
                       className="mail-input"
                       value={props.autoSendEmailAfterDays || 7}
+                      size="small"
+                      sx={{
+                        marginLeft: '5px',
+                        marginRight: '5px',
+                      }}
                     ></TextField>{' '}
                     Days
                   </Typography>
@@ -119,6 +135,8 @@ export const PreAdverseAction = ({ ...props }) => {
                         candidateName={data?.name}
                         candidateEmail={data?.email}
                         selectedCharges={checkedItems}
+                        regularPreviewFlag={false}
+                        attachments={attachments}
                       ></EmailNoticeTemplate>
                     }
                   ></EmailPreviewNoticeModal>

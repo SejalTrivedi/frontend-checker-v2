@@ -20,22 +20,13 @@
     width: unset !important;
 }
 .mail-labels {
-    /* font-family: 'Inter'; */
-    /* font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px; */
     color: #0A0B0D;
+    font-weight: bold;
 }
 .mail-values {
-    /* font-family: 'Inter'; */
-    /* font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    text-transform: capitalize; */
     color: #696A6E;
 }
+
 .mail-body-1 {
     font-family: 'Inter';
     font-style: normal;
@@ -58,22 +49,27 @@
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
-    /* padding: 8px 16px !important; */
 
 }
 .mail-footer {
-    /* padding-right: 10px;
-    padding-left: 16px;
-    padding-top: 12px; */
     padding: 0px !important;
     text-align: center !important;
 }
-.p-b-10 {
-    padding-bottom: 10px;
+.p-b-20 {
+    padding-bottom: 20px;
 }
-.p-t-10 {
-    padding-top: 10px;
+.p-t-20 {
+    padding-top: 20px;
 }
-.p-b-50 {
-    padding-bottom: 50px;
+.p-b-5 {
+    padding-bottom: 5px;
+}
+.p-t-5 {
+    padding-top: 5px;
+}
+.mail-attachment {
+    vertical-align: super;
+}
+.p-l-5 {
+    padding-left: 5px;
 }

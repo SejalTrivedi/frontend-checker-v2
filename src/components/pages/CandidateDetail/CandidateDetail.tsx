@@ -85,7 +85,7 @@ export const CandidateDetail =
             </Stack>
           }
           bodyTitle={
-            <Link to="/candidates" className='candidate-link'>
+            <Link to="/candidates" className="candidate-link">
               <Stack direction="row" spacing={2}>
                 <WestOutlined></WestOutlined>
                 <Typography>{data?.name}</Typography>
@@ -111,8 +111,8 @@ export const CandidateDetail =
                         <Grid
                           container
                           justifyContent="center"
-                          spacing={2} 
-                          className='candidate-info'
+                          spacing={2}
+                          className="candidate-info"
                         >
                           <Grid item>
                             <Paper className="candidate-Paper">
@@ -120,15 +120,17 @@ export const CandidateDetail =
                                 <Box className="candidate-Box">
                                   <PersonOutline className="unset-Icon-Style" />
                                 </Box>
-                                <Stack className='candidate-text'>
-                                  <Stack>
-                                    <Typography>Name</Typography>
-                                  </Stack>
-                                  <Stack>
-                                    <Typography>
-                                      {data?.name}
-                                    </Typography>
-                                  </Stack>
+                                <Stack>
+                                  <div className="candidate-text">
+                                    <Stack>
+                                      <Typography>Name</Typography>
+                                    </Stack>
+                                    <Stack>
+                                      <Typography>
+                                        {data?.name}
+                                      </Typography>
+                                    </Stack>
+                                  </div>
                                 </Stack>
                               </Stack>
                             </Paper>
@@ -139,15 +141,17 @@ export const CandidateDetail =
                                 <Box className="candidate-Box">
                                   <EmailOutlined className="unset-Icon-Style" />
                                 </Box>
-                                <Stack className='candidate-text'>
-                                  <Stack>
-                                    <Typography>Email</Typography>
-                                  </Stack>
-                                  <Stack>
-                                    <Typography>
-                                      {data?.email}
-                                    </Typography>
-                                  </Stack>
+                                <Stack>
+                                  <div className="candidate-text">
+                                    <Stack>
+                                      <Typography>Email</Typography>
+                                    </Stack>
+                                    <Stack>
+                                      <Typography>
+                                        {data?.email}
+                                      </Typography>
+                                    </Stack>
+                                  </div>
                                 </Stack>
                               </Stack>
                             </Paper>
@@ -158,15 +162,19 @@ export const CandidateDetail =
                                 <Box className="candidate-Box">
                                   <LocationOn className="unset-Icon-Style" />
                                 </Box>
-                                <Stack className='candidate-text'>
-                                  <Stack>
-                                    <Typography>Location</Typography>
-                                  </Stack>
-                                  <Stack>
-                                    <Typography>
-                                      {data?.location}
-                                    </Typography>
-                                  </Stack>
+                                <Stack>
+                                  <div className="candidate-text">
+                                    <Stack>
+                                      <Typography>
+                                        Location
+                                      </Typography>
+                                    </Stack>
+                                    <Stack>
+                                      <Typography>
+                                        {data?.location}
+                                      </Typography>
+                                    </Stack>
+                                  </div>
                                 </Stack>
                               </Stack>
                             </Paper>
@@ -177,15 +185,17 @@ export const CandidateDetail =
                                 <Box className="candidate-Box">
                                   <Cake className="unset-Icon-Style" />
                                 </Box>
-                                <Stack className='candidate-text'>
-                                  <Stack>
-                                    <Typography>DOB</Typography>
-                                  </Stack>
-                                  <Stack>
-                                    <Typography>
-                                      {data?.dob}
-                                    </Typography>
-                                  </Stack>
+                                <Stack>
+                                  <div className="candidate-text">
+                                    <Stack>
+                                      <Typography>DOB</Typography>
+                                    </Stack>
+                                    <Stack>
+                                      <Typography>
+                                        {data?.dob}
+                                      </Typography>
+                                    </Stack>
+                                  </div>
                                 </Stack>
                               </Stack>
                             </Paper>
@@ -204,7 +214,8 @@ export const CandidateDetail =
                   ></CandidateReportDetail>
                 }
               ></Accordion>
-              <Accordion expanded={true}
+              <Accordion
+                expanded={true}
                 title="Court Searches"
                 accordionDetails={
                   <CourtSearchList
