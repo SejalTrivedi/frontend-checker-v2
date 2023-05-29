@@ -13,6 +13,13 @@ import {
 
 import { Menu } from '../../atoms/Menu/Menu';
 import { Link } from 'react-router-dom';
+import Dashboard from '../../../../public/assets/Icons/Dashboard.png';
+import Account from '../../../../public/assets/Icons/Account.png';
+import Analytics from '../../../../public/assets/Icons/Analytics.png';
+import Contacts from '../../../../public/assets/Icons/Contacts.png';
+import logs from '../../../../public/assets/Icons/logs.png';
+import Screening from '../../../../public/assets/Icons/Screening.png';
+import Vector from '../../../../public/assets/Icons/Vector.png';
 
 export type MenuListProps = {};
 
@@ -21,37 +28,37 @@ export const MenuList: React.FC<MenuListProps> = ({ ...props }) => {
     {
       redirectTo: '/',
       menuName: 'Home',
-      menuIcon: <HomeOutlined />,
+      menuIcon: <img src={Dashboard} />,
     },
     {
       redirectTo: '/candidates',
       menuName: 'Candidates',
-      menuIcon: <PeopleAltOutlined />,
+      menuIcon: <img src={Contacts} />,
     },
     {
       redirectTo: '/',
       menuName: 'Adverse Actions',
-      menuIcon: <GavelOutlined />,
+      menuIcon: <img src={Vector} />,
     },
     {
       redirectTo: '/',
       menuName: 'Logs',
-      menuIcon: <ArticleOutlined />,
+      menuIcon: <img src={logs} />,
     },
     {
       redirectTo: '/',
       menuName: 'Analytics',
-      menuIcon: <AnalyticsOutlined />,
+      menuIcon: <img src={Analytics} />,
     },
     {
       redirectTo: '/',
       menuName: 'Account',
-      menuIcon: <AccountBoxOutlined />,
+      menuIcon: <img src={Account} />,
     },
     {
       redirectTo: '/',
       menuName: 'Screenings',
-      menuIcon: <NoteAltOutlined />,
+      menuIcon: <img src={Screening} />,
     },
   ];
 
