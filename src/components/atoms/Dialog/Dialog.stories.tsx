@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Dialog, DialogProps } from './Dialog';
 
 const meta = {
@@ -9,7 +9,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<DialogProps> = (args) => <Dialog {...args} />;
+const Template: StoryFn<DialogProps> = (args) => <Dialog {...args} />;
 
 export const SampleDialog = Template.bind({});
 SampleDialog.args = {

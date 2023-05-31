@@ -1,10 +1,10 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import {
   ContentBodyTitle,
   ContentBodyTitleProps,
 } from './ContentBodyTitle';
-import { Stack, color } from '@mui/system';
+import { Stack } from '@mui/system';
 import { Button } from '../../atoms/Button/Button';
 import { Download, PlusOne } from '@mui/icons-material';
 import { Typography } from '@mui/material';
@@ -15,7 +15,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<ContentBodyTitleProps> = (args) => (
+const Template: StoryFn<ContentBodyTitleProps> = (args) => (
   <ContentBodyTitle {...args} />
 );
 

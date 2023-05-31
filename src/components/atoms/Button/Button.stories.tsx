@@ -1,13 +1,7 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Button, ButtonProps } from './Button';
-import {
-  Download,
-  GitHub,
-  Google,
-  Logout,
-  PlusOneOutlined,
-} from '@mui/icons-material';
+import { GitHub, Logout, PlusOneOutlined } from '@mui/icons-material';
 
 const meta = {
   title: 'Components/Atoms/Button',
@@ -16,7 +10,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 
 export const OutlinedButton = Template.bind({});
 OutlinedButton.args = {

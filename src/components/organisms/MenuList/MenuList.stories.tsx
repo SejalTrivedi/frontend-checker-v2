@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { MenuList, MenuListProps } from './MenuList';
 
 const meta = {
@@ -9,7 +9,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<MenuListProps> = (args) => (
+const Template: StoryFn<MenuListProps> = (args) => (
   <MenuList {...args} />
 );
 

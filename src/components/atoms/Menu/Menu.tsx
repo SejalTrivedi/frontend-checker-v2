@@ -4,8 +4,6 @@ import {
   ListItemIcon,
   ListItemButton,
   ListItemText,
-  createMuiTheme,
-  makeStyles,
 } from '@mui/material';
 
 export type MenuProps = {
@@ -20,7 +18,7 @@ const active = {
       backgroundColor: '#EFF2FF',
     },
   },
-}
+};
 
 export const Menu: React.FC<MenuProps> = ({ ...props }) => {
   return (

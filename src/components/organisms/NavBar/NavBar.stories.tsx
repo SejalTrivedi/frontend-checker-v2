@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { LeftNavBar, LeftNavBarProps } from './NavBar';
 
 const meta = {
@@ -9,7 +9,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<LeftNavBarProps> = (args) => (
+const Template: StoryFn<LeftNavBarProps> = (args) => (
   <LeftNavBar {...args} />
 );
 

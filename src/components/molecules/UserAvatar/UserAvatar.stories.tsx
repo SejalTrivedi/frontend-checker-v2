@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { UserAvatarMolecule, UserAvatarProps } from './UserAvatar';
 
 const meta = {
@@ -9,7 +9,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<UserAvatarProps> = (args) => (
+const Template: StoryFn<UserAvatarProps> = (args) => (
   <UserAvatarMolecule {...args} />
 );
 

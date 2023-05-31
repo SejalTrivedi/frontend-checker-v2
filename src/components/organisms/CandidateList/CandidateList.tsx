@@ -8,10 +8,14 @@ export class CandidateList extends React.Component {
   };
 
   componentDidMount() {
-    axios.get(`http://localhost:3000/candidate/`).then((res) => {
-      const persons = res.data;
-      this.setState({ persons });
-    });
+    try {
+      axios.get(`http://localhost:3000/candidate/`).then((res) => {
+        const persons = res.data;
+        this.setState({ persons });
+      });
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
   }
 
   render() {
@@ -22,8 +26,8 @@ export class CandidateList extends React.Component {
           'Name',
           'Adjudication',
           'Status',
-          'Location',
           'Date',
+          'Location',
         ]}
       ></Table>
     );

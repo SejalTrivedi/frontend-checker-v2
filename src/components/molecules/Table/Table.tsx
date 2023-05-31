@@ -11,20 +11,21 @@ import {
   TableFooter,
 } from '@mui/material';
 
-import { demoTableStoryRows } from '../../data/data';
 import { Link } from 'react-router-dom';
 
 export interface TableProps extends MuiTableProps {
   dataRows: any[];
   sequenceColumn: string[];
+  handleRowClick?: (rowId: number) => void;
 }
 
 export const Table: React.FC<TableProps> = ({
-  dataRows = demoTableStoryRows,
+  dataRows,
+  handleRowClick,
   ...props
 }) => {
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
   };
@@ -39,8 +40,19 @@ export const Table: React.FC<TableProps> = ({
     return value == 'Clear' ? 'status-clear' : 'status-consider';
   };
   const getAdjudicationValueColor = (value: string) => {
-    return value == 'Adverse Action' ? 'status-consider' : 'status-clear';
+    return value == 'Adverse Action'
+      ? 'status-consider'
+      : 'status-clear';
   };
+  
+  
+  const handleRowClickInternal = (rowId: number) => {
+    if (handleRowClick) {
+      handleRowClick(rowId);
+    }
+  };
+
+
   return (
     <MuiTable {...props}>
       <TableHead
@@ -59,7 +71,7 @@ export const Table: React.FC<TableProps> = ({
           .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
           .map((data) => {
             return (
-              <TableRow>
+              <TableRow key={data['id']}>
                 <TableCell key={data['name']}>
                   <Link to={`/candidate-detail/${data.id}`}>
                     {data['name']}
@@ -68,10 +80,9 @@ export const Table: React.FC<TableProps> = ({
                 <TableCell key={data.adjudication}>
                   {data.adjudication ? (
                     <Chip
-                      // color={getAdjudicationValueColor(
-                      //   data.adjudication
-                      // )}
-                      className={getAdjudicationValueColor(data.adjudication)}
+                      className={getAdjudicationValueColor(
+                        data.adjudication
+                      )}
                       label={data.adjudication}
                     />
                   ) : (
@@ -81,7 +92,6 @@ export const Table: React.FC<TableProps> = ({
                 <TableCell key={data.status}>
                   {data.status ? (
                     <Chip
-                      // color={getStatusValueColor(data.status)}
                       className={getStatusValueColor(data.status)}
                       label={data.status}
                     />

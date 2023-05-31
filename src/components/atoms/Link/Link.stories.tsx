@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Link, LinkProps } from './Link';
 
 const meta = {
@@ -9,7 +9,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<LinkProps> = (args) => <Link {...args} />;
+const Template: StoryFn<LinkProps> = (args) => <Link {...args} />;
 
 export const SampleLink = Template.bind({});
 SampleLink.args = {

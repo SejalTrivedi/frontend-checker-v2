@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Table, TableProps } from './Table';
 
 const meta = {
@@ -9,7 +9,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<TableProps> = (args) => <Table {...args} />;
+const Template: StoryFn<TableProps> = (args) => <Table {...args} />;
 
 export const SampleTable = Template.bind({});
 SampleTable.args = {};

@@ -29,14 +29,24 @@ export const CandidateReportDetail: React.FC<
   const candidate = useParams();
   const [data, setData] = useState<Data | null>(null);
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        `http://localhost:3000/report?candidateId=${candidate.id}`
-      );
-      setData(response.data[0]);
-    };
-
-    fetchData();
+    async function fetchData() {
+      try {
+        const response = await axios.get(
+          `http://localhost:3000/report?candidateId=${candidate.id}`
+        );
+        setData(response.data[0]);
+        // Handle the success case
+      } catch (error) {
+        // Handle the error case
+      }
+    }
+    fetchData()
+      .then((response) => {
+        // Handle the success case
+      })
+      .catch((error) => {
+        // Handle the error case
+      });
   }, [props.candidateId]);
   return (
     <>

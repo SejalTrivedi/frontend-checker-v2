@@ -24,14 +24,24 @@ export const CandidateChargeList: React.FC<
   const [data, setData] = useState<Data | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        `http://localhost:3000/charges?candidateId=${candidateId}`
-      );
-      setData(response.data[0]);
-    };
-
-    fetchData();
+    async function fetchData() {
+      try {
+        const response = await axios.get(
+          `http://localhost:3000/charges?candidateId=${candidateId}`
+        );
+        setData(response.data[0]);
+        // Handle the success case
+      } catch (error) {
+        // Handle the error case
+      }
+    }
+    fetchData()
+      .then((response) => {
+        // Handle the success case
+      })
+      .catch((error) => {
+        // Handle the error case
+      });
   }, [candidateId]);
 
   const handleCheckboxChange = (option: string): void => {

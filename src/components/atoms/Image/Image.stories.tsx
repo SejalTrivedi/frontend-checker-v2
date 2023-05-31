@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Image } from './Image';
 import generalImage from '../../../../public/assets/generalImage.png';
 export default {
@@ -19,7 +19,7 @@ export default {
   },
 } as Meta<typeof Image>;
 
-const Template: Story<typeof Image> = (args: any) => (
+const Template: StoryFn<typeof Image> = (args: any) => (
   <Image {...args} />
 );
 

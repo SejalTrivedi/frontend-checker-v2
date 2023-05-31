@@ -19,9 +19,8 @@ function createStoryData(
   const formattedYear = `${year}`;
 
   // Combine the formatted components into the desired date format
-  const formattedDate = `${formattedDay}/${formattedMonth}/${formattedYear}`;
+  date = `${formattedDay}/${formattedMonth}/${formattedYear}`;
 
-  date = formattedDate;
   return { name, adjudication, status, date, location };
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import {
   EmailPreviewNoticeModal,
   EmailPreviewNoticeModalProps,
@@ -13,7 +13,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<EmailPreviewNoticeModalProps> = (args) => (
+const Template: StoryFn<EmailPreviewNoticeModalProps> = (args) => (
   <EmailPreviewNoticeModal {...args} />
 );
 

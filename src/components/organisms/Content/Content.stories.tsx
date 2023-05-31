@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Content, ContentProps } from './Content';
 import { Stack } from '@mui/system';
 import { Button } from '../../atoms/Button/Button';
@@ -27,7 +27,9 @@ const meta = {
 
 export default meta;
 
-const Template: Story<ContentProps> = (args) => <Content {...args} />;
+const Template: StoryFn<ContentProps> = (args) => (
+  <Content {...args} />
+);
 
 export const SampleContent = Template.bind({});
 SampleContent.args = {
@@ -82,7 +84,7 @@ SampleContent.args = {
                 inputProps={{
                   'aria-label': 'weight',
                 }}
-                placeholder='Search any candidate'
+                placeholder="Search any candidate"
               />
             </Grid>
             <Grid item>

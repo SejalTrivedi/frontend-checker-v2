@@ -1,5 +1,5 @@
-import { Card, Paper } from '@mui/material';
 import React from 'react';
+import { Paper } from '@mui/material';
 import { ContentBody } from '../../molecules/ContentBody/ContentBody';
 import { ContentBodyTitle } from '../../molecules/ContentBodyTitle/ContentBodyTitle';
 

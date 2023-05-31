@@ -1,16 +1,5 @@
 import React from 'react';
 import { Stack } from '@mui/material';
-
-import {
-  HomeOutlined,
-  GavelOutlined,
-  PeopleAltOutlined,
-  AnalyticsOutlined,
-  AccountBoxOutlined,
-  ArticleOutlined,
-  NoteAltOutlined,
-} from '@mui/icons-material';
-
 import { Menu } from '../../atoms/Menu/Menu';
 import { Link } from 'react-router-dom';
 import Dashboard from '../../../../public/assets/Icons/Dashboard.png';
@@ -66,7 +55,11 @@ export const MenuList: React.FC<MenuListProps> = ({ ...props }) => {
     <Stack>
       {nav_bar_list_property.map((menu) => {
         return (
-          <Link to={menu.redirectTo} className="text-decoration-none">
+          <Link
+            key={menu.menuName}
+            to={menu.redirectTo}
+            className="text-decoration-none"
+          >
             <Menu
               key={menu.menuName}
               menuIcon={menu.menuIcon}

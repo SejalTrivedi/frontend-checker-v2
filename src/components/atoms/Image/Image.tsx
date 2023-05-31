@@ -8,6 +8,7 @@ interface ImageProps {
   top?: string;
   borderRadius?: string;
   left?: string;
+  className?: string;
 }
 
 export const Image = (props: ImageProps) => {
@@ -17,6 +18,7 @@ export const Image = (props: ImageProps) => {
       height={props.height}
       width={props.width}
       alt={props.alt}
+      className={props.className}
     ></img>
   );
 };

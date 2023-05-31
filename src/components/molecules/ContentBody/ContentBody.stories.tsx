@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { ContentBody, ContentBodyProps } from './ContentBody';
 import { Table } from '../Table/Table';
 import { demoTableStoryRows } from '../../data/data';
@@ -25,7 +25,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<ContentBodyProps> = (args) => (
+const Template: StoryFn<ContentBodyProps> = (args) => (
   <ContentBody {...args} />
 );
 export const SampleContentBody = Template.bind({});
@@ -66,7 +66,7 @@ SampleContentBody.args = {
                 inputProps={{
                   'aria-label': 'weight',
                 }}
-                placeholder='Search any candidate'
+                placeholder="Search any candidate"
               />
             </Grid>
             <Grid item>

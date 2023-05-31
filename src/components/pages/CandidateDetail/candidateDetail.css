@@ -14,8 +14,8 @@
 .candidate-Paper{
     height: 68px;
     width: 330px;
-    background-color: #E5E7ED;
     background: #FAFAFC;    
+    background-color: #E5E7ED;
     border: 1px solid #E5E7ED;
     border-radius: 12px;
 }

@@ -6,7 +6,7 @@ export type EmailNoticeProps = {
   candidateName?: string;
   candidateEmail?: string;
   candidateCharges?: React.ReactElement;
-  selectedCharges?: string[] | [] | undefined;
+  selectedCharges?: string[] | [];
   regularPreviewFlag: boolean;
   attachments?: string[] | [];
 };
@@ -14,20 +14,31 @@ export type EmailNoticeProps = {
 export const EmailNoticeTemplate = ({
   ...props
 }: EmailNoticeProps) => {
-  console.log('attachments ', props.attachments);
   return (
     <>
-      <Typography className={props.regularPreviewFlag ? 'p-b-20 p-t-20' : 'p-b-5 p-t-5'}>
+      <Typography
+        className={
+          props.regularPreviewFlag ? 'p-b-20 p-t-20' : 'p-b-5 p-t-5'
+        }
+      >
         <span className="mail-labels">From:</span>{' '}
         <span className="mail-values">kyle@checkr.com</span>
       </Typography>
       {props.regularPreviewFlag ? <Divider /> : null}
-      <Typography className={props.regularPreviewFlag ? 'p-b-20 p-t-20' : 'p-b-5 p-t-5'}>
+      <Typography
+        className={
+          props.regularPreviewFlag ? 'p-b-20 p-t-20' : 'p-b-5 p-t-5'
+        }
+      >
         <span className="mail-labels">To:</span>{' '}
         <span className="mail-values">{props.candidateEmail}</span>
       </Typography>
       {props.regularPreviewFlag ? <Divider /> : null}
-      <Typography className={props.regularPreviewFlag ? 'p-b-20 p-t-20' : 'p-b-5 p-t-5'}>
+      <Typography
+        className={
+          props.regularPreviewFlag ? 'p-b-20 p-t-20' : 'p-b-5 p-t-5'
+        }
+      >
         <span className="mail-labels">Subject:</span>{' '}
         <span className="mail-values">
           Pre-adverse action notice - checkr-bpo
@@ -38,7 +49,7 @@ export const EmailNoticeTemplate = ({
           <Card
             sx={{
               backgroundColor: '#FCE5EA',
-              boxShadow: 'unset'
+              boxShadow: 'unset',
             }}
           >
             <ul
@@ -98,7 +109,7 @@ export const EmailNoticeTemplate = ({
             >
               {props.selectedCharges.map((chargeName) => {
                 return (
-                  <li>
+                  <li key={chargeName}>
                     <Typography>{chargeName}</Typography>
                   </li>
                 );
@@ -123,16 +134,21 @@ export const EmailNoticeTemplate = ({
         <Typography className="mail-body-1 p-b-20">
           Checkr-bpo |
         </Typography>
-        {props.attachments ?
+        {props.attachments ? (
           <div>
-            <span className='mail-labels'>Attachments</span>
+            <span className="mail-labels">Attachments</span>
             {props.attachments?.map((value) => {
               return (
-                <Typography><AttachmentIcon /><span className='mail-attachment p-l-5'>{value}</span></Typography>
-              )
+                <Typography key={value}>
+                  <AttachmentIcon />
+                  <span className="mail-attachment p-l-5">
+                    {value}
+                  </span>
+                </Typography>
+              );
             })}
           </div>
-          : null}
+        ) : null}
       </div>
     </>
   );

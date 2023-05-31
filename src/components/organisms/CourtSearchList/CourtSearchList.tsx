@@ -32,16 +32,26 @@ export const CourtSearchList: React.FC<CourtSearchProps> = ({
   const candidate = useParams();
   const [data, setData] = useState<Data | null>(null);
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        `http://localhost:3000/candidate_court_searches?candidateId=${candidate.id}`
-      );
-      setData(response.data[0]);
-    };
-
-    fetchData();
+    async function fetchData() {
+      try {
+        const response = await axios.get(
+          `http://localhost:3000/candidate_court_searches?candidateId=${candidate.id}`
+        );
+        setData(response.data[0]);
+        // Handle the success case
+      } catch (error) {
+        // Handle the error case
+      }
+    }
+    fetchData()
+      .then((response) => {
+        // Handle the success case
+      })
+      .catch((error) => {
+        // Handle the error case
+      });
   }, [props.candidateId]);
-  
+
   const getStatusValueColor = (value: string) => {
     return value == 'Clear' ? 'status-clear' : 'status-consider';
   };
@@ -54,28 +64,30 @@ export const CourtSearchList: React.FC<CourtSearchProps> = ({
       >
         <TableRow>
           {['Search', 'Status', 'Date'].map((columnTitle) => {
-            return <TableCell>{columnTitle}</TableCell>;
+            return (
+              <TableCell key={columnTitle}>{columnTitle}</TableCell>
+            );
           })}
         </TableRow>
       </TableHead>
       <TableBody>
         {data?.court_searches.map((searchData) => {
           return (
-            <TableRow>
+            <TableRow key={searchData.search_name}>
               <TableCell>
                 <Typography color={'#224DFF'}>
                   {searchData.search_name}
                 </Typography>
               </TableCell>
               <TableCell>
-                  {searchData.status ? (
-                    <Chip
-                      className={getStatusValueColor(searchData.status)}
-                      label={searchData.status}
-                    />
-                  ) : (
-                    '-'
-                  )}
+                {searchData.status ? (
+                  <Chip
+                    className={getStatusValueColor(searchData.status)}
+                    label={searchData.status}
+                  />
+                ) : (
+                  '-'
+                )}
               </TableCell>
               <TableCell>
                 <Typography>{searchData.date}</Typography>

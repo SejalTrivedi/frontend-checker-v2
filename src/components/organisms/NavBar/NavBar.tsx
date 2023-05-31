@@ -34,6 +34,7 @@ export const LeftNavBar = ({ ...props }: LeftNavBarProps) => {
               left="28px"
               top="28px"
               borderRadius="0px"
+              alt="Recruit!!"
             />
           </ListItem>
           <ListItem sx={{ textDecoration: 'none' }}>
@@ -44,7 +45,10 @@ export const LeftNavBar = ({ ...props }: LeftNavBarProps) => {
       <Box>
         <Divider />
         <List style={{ margin: '0px 0px 0px 5px' }}>
-          <UserAvatarMolecule></UserAvatarMolecule>
+          <UserAvatarMolecule
+            userName="Ronak"
+            userAvatarSrc="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png"
+          ></UserAvatarMolecule>
         </List>
       </Box>
     </Box>

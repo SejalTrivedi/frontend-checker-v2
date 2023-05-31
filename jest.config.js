@@ -4,32 +4,39 @@
  */
 
 module.exports = {
-  testEnvironment: "jsdom",
-  coverageDirectory: "coverage",
+  testEnvironment: 'jsdom',
+  coverageDirectory: 'coverage',
   collectCoverage: true,
-  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!src/**/*stories.{ts,tsx}"],
-  setupFiles: ["./src/SetupTests.js"],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx}',
+    '!src/**/*stories.{ts,tsx}',
+  ],
+  setupFiles: ['./src/SetupTests.js'],
   coveragePathIgnorePatterns: [
-    "<rootDir>/node_modules/",
-    ".story.js",
-    "<rootDir>/assetsTransformer.js",
-    "<rootDir>/coverage",
-    "<rootDir>/src/assets",
-    "<rootDir>/src/utils/commandCentermockData.js",
+    '<rootDir>/node_modules/',
+    '.story.tsx',
+    '<rootDir>/assetsTransformer.js',
+    '<rootDir>/coverage',
+    '<rootDir>/src/assets',
+    '<rootDir>/src/utils/commandCentermockData.js',
+    'config-overrides.js',
+    'jest.config.js',
+    'webpack.config.js',
+    '<rootDir>/src/index.tsx',
   ],
   testPathIgnorePatterns: [
-    "<rootDir>/node_modules/",
-    "<rootDir>/coverage",
-    "<rootDir>/src/utils/commandCentermockData.js",
+    '<rootDir>/node_modules/',
+    '<rootDir>/coverage',
+    '<rootDir>/src/utils/commandCentermockData.js',
   ],
   transform: {
-    "^.+\\.js?$": "babel-jest",
-    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "./assetsTransformer.js",
+    '^.+\\.js?$': 'babel-jest',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      './assetsTransformer.js',
   },
   moduleNameMapper: {
-    ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
+    '.+\\.(css|style|less|sass|scss)$': 'identity-obj-proxy',
   },
   verbose: true,
-  moduleDirectories: ["node_modules", "src"],
+  moduleDirectories: ['node_modules', 'src'],
 };

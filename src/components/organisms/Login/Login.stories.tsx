@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Login, LoginProps } from './Login';
 
 const meta = {
@@ -9,7 +9,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<LoginProps> = (args) => <Login {...args} />;
+const Template: StoryFn<LoginProps> = (args) => <Login {...args} />;
 
 export const SampleLogin = Template.bind({});
 SampleLogin.args = {};

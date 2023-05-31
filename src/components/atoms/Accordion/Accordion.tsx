@@ -1,6 +1,6 @@
-import React, { ChangeEvent, useState } from 'react';
 import {
   Accordion as MUIAccordion,
+  AccordionProps as MuiAccordionProps,
   AccordionSummary,
   AccordionDetails,
   Typography,
@@ -8,14 +8,11 @@ import {
 } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
 
-export interface AccordionProps {
-  title: string;
-  accordionDetails: React.ReactElement;
-  expanded?: boolean;
+export interface AccordionProps extends MuiAccordionProps {
+  accordionDetails?: React.ReactElement;
 }
 
 export const Accordion: React.FC<AccordionProps> = ({
-  title,
   accordionDetails,
   expanded,
   ...props
@@ -27,7 +24,7 @@ export const Accordion: React.FC<AccordionProps> = ({
         aria-controls="accordion-content"
         id="accordion-header"
       >
-        <Typography>{title}</Typography>
+        <Typography>{props.children}</Typography>
       </AccordionSummary>
       <Divider></Divider>
       <AccordionDetails>{accordionDetails}</AccordionDetails>

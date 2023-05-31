@@ -14,7 +14,6 @@ import './preAdverse.css';
 import { WestOutlined } from '@mui/icons-material';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { HTMLPreview } from '../../molecules/HtmlPreview/HtmlPreview';
 import { EmailPreviewNoticeModal } from '../../organisms/EmailPreviewNoticeModal/EmailPreviewNoticeModal';
 import { EmailNoticeTemplate } from '../../templates/EmailNoticeTemplate/EmailNoticeTemplate';
 
@@ -29,16 +28,29 @@ type Data = {
 export const PreAdverseAction = ({ ...props }) => {
   const candidate = useParams();
   const [data, setData] = useState<Data | null>(null);
-  const attachments = ['Summary of right under the FCRA', 'Copy of background report'];
+  const attachments = [
+    'Summary of right under the FCRA',
+    'Copy of background report',
+  ];
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        `http://localhost:3000/candidate?id=${candidate.id}`
-      );
-      setData(response.data[0]);
-    };
-
-    fetchData();
+    async function fetchData() {
+      try {
+        const response = await axios.get(
+          `http://localhost:3000/candidate?id=${candidate.id}`
+        );
+        setData(response.data[0]);
+        // Handle the success case
+      } catch (error) {
+        // Handle the error case
+      }
+    }
+    fetchData()
+      .then((response) => {
+        // Handle the success case
+      })
+      .catch((error) => {
+        // Handle the error case
+      });
   }, [props.candidateId]);
 
   const [checkedItems, setCheckedItems] = useState<string[]>([]);

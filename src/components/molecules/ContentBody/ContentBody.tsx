@@ -1,6 +1,5 @@
 import React from 'react';
-import { Paper, Typography } from '@mui/material';
-import { Stack } from '@mui/system';
+import { Paper } from '@mui/material';
 
 export type ContentBodyProps = {
   contentBox: React.ReactElement | null;

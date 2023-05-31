@@ -71,17 +71,28 @@ export const EmailPreviewNoticeModal = ({
     setMainModalOpen(false);
   };
 
-  const mainModalHandleSubmit = async () => {
-    try {
-      props.candidateData['adjudication'] = 'Adverse Action';
-      await axios.put(
-        `http://localhost:3000/candidate/${props.candidateData['id']}`,
-        props.candidateData
-      );
-      window.location.href = '/candidates';
-    } catch (error) {
-      console.error('Error:', error);
+  const mainModalHandleSubmit = () => {
+    async function fetchData() {
+      try {
+        props.candidateData['adjudication'] = 'Adverse Action';
+        await axios.put(
+          `http://localhost:3000/candidate/${props.candidateData['id']}`,
+          props.candidateData
+        );
+        // Handle the success case
+      } catch (error) {
+        // Handle the error case
+      }
     }
+    fetchData()
+      .then(() => {
+        // Handle the successful resolution
+        window.location.href = '/candidates';
+      })
+      .catch((error) => {
+        // Handle the error
+        console.log(error);
+      });
   };
 
   return (

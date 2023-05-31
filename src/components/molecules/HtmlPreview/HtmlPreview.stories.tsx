@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { HTMLPreview, HTMLPreviewProps } from './HtmlPreview';
 
 const meta = {
@@ -9,7 +9,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<HTMLPreviewProps> = (args) => (
+const Template: StoryFn<HTMLPreviewProps> = (args) => (
   <HTMLPreview {...args} />
 );
 

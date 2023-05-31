@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import { Stack } from '@mui/system';
 
 export type ContentBodyTitleProps = {
   rightButtonList: React.ReactElement | null;

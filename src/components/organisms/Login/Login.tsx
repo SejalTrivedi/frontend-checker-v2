@@ -12,7 +12,6 @@ import generalImage from '../../../../public/assets/generalImage.png';
 import { TextField } from '../../atoms/TextField/TextField';
 import { Button } from '../../atoms/Button/Button';
 import { GitHub, Google } from '@mui/icons-material';
-import { padding } from '@mui/system';
 export type LoginProps = {};
 
 export const Login = ({ ...props }: LoginProps) => {

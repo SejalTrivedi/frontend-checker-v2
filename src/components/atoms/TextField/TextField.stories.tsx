@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, StoryObj, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { TextField, BaseTextFieldProps } from './TextField';
 
 const meta = {
@@ -9,7 +9,7 @@ const meta = {
 
 export default meta;
 
-const Template: Story<BaseTextFieldProps> = (args) => (
+const Template: StoryFn<BaseTextFieldProps> = (args) => (
   <TextField {...args} />
 );
 
